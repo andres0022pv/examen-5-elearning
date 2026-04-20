@@ -1,0 +1,61 @@
+/* 1. Estilos generales */
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. El Bloque Hero (La sección principal) */
+.hero {
+  height: 90vh; 
+  /* El linear-gradient pone una capa oscura para que el texto blanco resalte */
+  background: linear-gradient(rgba(24, 31, 46, 0.7), rgba(24, 31, 46, 0.7)), 
+              url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070') no-repeat center center;
+  background-size: cover; 
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* 3. Elementos BEM (Bloque__Elemento) */
+.hero__subtitle {
+  letter-spacing: 1px;
+}
+
+.hero__title {
+  line-height: 1.2;
+}
+
+/* 4. Modificadores BEM (Bloque__Elemento--Modificador) */
+.hero__btn--primary, 
+.hero__btn--secondary {
+  border-radius: 0px !important; 
+  font-weight: bold;
+  padding: 15px 40px;
+}
+
+/* 5. Flechas decorativas de la derecha */
+.hero__navigation {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero__arrow {
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Efecto opcional para que las flechas brillen al pasar el mouse */
+.hero__arrow:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
